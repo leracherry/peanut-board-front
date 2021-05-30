@@ -9,6 +9,9 @@ import { MainContainer } from "./components/MainContainer";
 import { Form } from "./components/Form";
 import { Input } from "./components/Input";
 import * as yup from "yup";
+import { Google } from "./Google";
+import GoogleButton from "react-google-button";
+import GoogleLogin from "react-google-login";
 
 
 const schema = yup.object().shape({
@@ -63,9 +66,15 @@ export const Step2 = () => {
                 />
                 <PrimaryButton onClick={onSubmit}>OK</PrimaryButton>
 
+                <GoogleButton
+                    type="light" // can be light or dark
+                    onClick={() => { window.location.assign('/Google');}}
+                />
+
             </Form>
+            <br></br>
             <Link to="/">Log In</Link>
-            <Link to="/Google">Google</Link>
+
         </MainContainer>
     );
 };
