@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import {Link, useHistory} from "react-router-dom";
 import { useData } from "./DataContext";
 import Typography from "@material-ui/core/Typography";
@@ -9,6 +9,7 @@ import { MainContainer } from "./components/MainContainer";
 import { Form } from "./components/Form";
 import { Input } from "./components/Input";
 import * as yup from "yup";
+
 
 const schema = yup.object().shape({
     email: yup
@@ -61,8 +62,10 @@ export const Step2 = () => {
                     helperText={errors?.password?.message}
                 />
                 <PrimaryButton onClick={onSubmit}>OK</PrimaryButton>
+
             </Form>
             <Link to="/">Log In</Link>
+            <Link to="/Google">Google</Link>
         </MainContainer>
     );
 };
