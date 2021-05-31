@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import {Link, useHistory} from "react-router-dom";
 import { useData } from "./DataContext";
 import Typography from "@material-ui/core/Typography";
@@ -9,6 +9,10 @@ import { MainContainer } from "./components/MainContainer";
 import { Form } from "./components/Form";
 import { Input } from "./components/Input";
 import * as yup from "yup";
+import { Google } from "./Google";
+import GoogleButton from "react-google-button";
+import GoogleLogin from "react-google-login";
+
 
 const schema = yup.object().shape({
     email: yup
@@ -39,7 +43,7 @@ export const Step2 = () => {
     return (
         <MainContainer>
             <Typography component="h2" variant="h5">
-                Log In
+                Sign in
             </Typography>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Input
@@ -61,8 +65,22 @@ export const Step2 = () => {
                     helperText={errors?.password?.message}
                 />
                 <PrimaryButton onClick={onSubmit}>OK</PrimaryButton>
+
+                <GoogleButton
+                style={{
+                    width: 395,
+                    textAlign: 'center',
+                }}
+                type="light"// can be light or dark
+                onClick={() => {
+                    window.location.assign('/Google');
+                }}
+                />
+
             </Form>
-            <Link to="/">Log In</Link>
+            <br></br>
+            <Link to="/">Sign up</Link>
+
         </MainContainer>
     );
 };
