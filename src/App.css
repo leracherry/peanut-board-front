@@ -1,0 +1,12 @@
+.bg-myWhite{
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+.content{
+    margin-top: 80px;
+    margin-left: 200px;
+    padding:12px;
+}
+.nav{
+
+}
