@@ -8,5 +8,7 @@
     padding:12px;
 }
 .nav{
-
+    position: absolute;
+    right: 0;
+    padding-right: 200px;
 }

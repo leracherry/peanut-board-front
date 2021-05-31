@@ -20,16 +20,16 @@ function App() {
           <div className="Nav">
               <Navbar bg="myWhite" variant="light" fixed="top" expand="sm" collapseOnSelect>
                   <Navbar.Brand>
-                      <img src={logo} height={40} width={80} />{' '}
+                      <img src ={logo} height={40} width={80} />{' '}
                       Peanut board
                   </Navbar.Brand>
                   <Navbar.Toggle/>
-                  <Navbar.Collapse>
+                  <Navbar.Collapse class="nav">
                       <Nav>
-                          <NavLink to="#Main">Main</NavLink>
-                          <NavLink to="#About Us">About Us</NavLink>
-                          <NavLink to="#Payments">Payments</NavLink>
-                          <NavLink to="#Step1">Sign up</NavLink>
+                          <NavLink to="#Main"> Main </NavLink>
+                          <NavLink to="#About Us"> About Us </NavLink>
+                          <NavLink to="#Payments"> Payments </NavLink>
+                          <NavLink to="#Step1"> Sign up </NavLink>
                       </Nav>
                   </Navbar.Collapse>
               </Navbar>
