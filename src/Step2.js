@@ -43,7 +43,7 @@ export const Step2 = () => {
     return (
         <MainContainer>
             <Typography component="h2" variant="h5">
-                Log In
+                Sign in
             </Typography>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Input
@@ -67,13 +67,19 @@ export const Step2 = () => {
                 <PrimaryButton onClick={onSubmit}>OK</PrimaryButton>
 
                 <GoogleButton
-                    type="light" // can be light or dark
-                    onClick={() => { window.location.assign('/Google');}}
+                style={{
+                    width: 395,
+                    textAlign: 'center',
+                }}
+                type="light"// can be light or dark
+                onClick={() => {
+                    window.location.assign('/Google');
+                }}
                 />
 
             </Form>
             <br></br>
-            <Link to="/">Log In</Link>
+            <Link to="/">Sign up</Link>
 
         </MainContainer>
     );

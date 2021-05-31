@@ -92,7 +92,7 @@ export const Step1 = () => {
             />
             <PrimaryButton>Ok</PrimaryButton>
           </Form>
-          <Link to="/Step2">Sign up</Link>
+          <Link to="/Step2">Sign in</Link>
         </MainContainer>
     );
   };
