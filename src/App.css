@@ -3,12 +3,85 @@
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
 }
 .content{
-    margin-top: 80px;
+    margin-top: 10px;
     margin-left: 200px;
-    padding:12px;
+    font-size:22px;
+    font-family: 'Charlie Display',sans-serif;
+    color: #091e42;
 }
 .nav{
     position: absolute;
     right: 0;
+    padding-right: 20px;
+}
+.nav1{
+    margin:120px;
+    word-spacing: 10px;
+    font-size:10px;
+}
+.mainContent{
+    padding-top: 80px;
+    font-size:50px;
+    color: #091e42;
+    font-weight: bold;
+    font-family: 'Charlie Display',sans-serif;
+}
+.hero{
+    float:right;
+    padding-right: 150px;
+    max-width:60%;
+}
+.powerUps{
+    float:right;
     padding-right: 200px;
+    max-width:40%;
+}
+.cardBack{
+    margin-top: 80px;
+    float:left;
+    max-width:30%;
+}
+.powerUps{
+    margin-top: 100px;
+}
+.content2{
+    color: #091e42;
+    font-size:22px;
+    padding-right: 200px;
+}
+.mainContent2{
+    margin-top: 130px;
+    padding-right: 200px;
+    font-size:35px;
+    color: #091e42;
+    font-weight: bold;
+    font-family: 'Charlie Display',sans-serif;
+}
+.mainContent3{
+    margin-top: 120px;
+    padding-right: 700px;
+    font-size:35px;
+    color: #091e42;
+    font-weight: bold;
+    font-family: 'Charlie Display',sans-serif;
+}
+.content3{
+    color: #091e42;
+    font-size:22px;
+    padding-right: 700px;
+}
+.content4{
+    padding-left: 700px;
+    padding-right: 200px;
+    color: #091e42;
+    font-size:22px;
+}
+.mainContent4{
+    margin-top: 80px;
+    padding-right: 200px;
+    padding-left: 600px;
+    font-size:35px;
+    color: #091e42;
+    font-weight: bold;
+    font-family: 'Charlie Display',sans-serif;
 }
