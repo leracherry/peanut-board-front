@@ -5,7 +5,7 @@ import { MainContainer } from "./components/MainContainer";
 export const Main = () => {
     return (
         <MainContainer>
-    <Link to="/Step1">Sign in</Link>
-</MainContainer>
+            <Link to="/Step1">Sign up</Link>
+        </MainContainer>
     );
 };
