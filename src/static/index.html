@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+  </head>
+
+  <body>
+    <di id="app">
+      <header>
+        <h2>TODOList</h2>
+      </header>
+      <main>
+        <div class="container">
+          <section class="toolbar">
+            <div>
+              <input class="searchTodo" type="text" value="" placeholder="search by title" />
+            </div>
+            <div>
+              <select name="status" class="status">
+                <option value="open">open</option>
+                <option value="done">done</option>
+              </select>
+            </div>
+            <div>
+              <select name="priority" class="priority">
+                <option value="high">high</option>
+                <option value="normal" selected>normal</option>
+                <option value="low">low</option>
+              </select>
+            </div>
+            <div>
+              <button class="button create-todo" type="button">create</button>
+            </div>
+          </section>
+          <section class="">
+            <ul class="grid todo-list">
+              <!-- <li class="todo-item">
+                <h4 class="title">title</h4>
+                <div class="description">
+                  description
+                </div>
+                <div class="todo-item__footer">
+                  <div class="priority-box">normal</div>
+                  <div class="action-box">
+                    <div class="action-box__menu">...</div>
+                    <div class="actions">
+                      <button class="button" type="button">done</button>
+                      <button class="button" type="button">edit</button>
+                      <button class="button" type="button">delete</button>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+            </ul>
+          </section>
+        </div>
+      </main>
+      <div class="modal-wrapper">
+          <div id="modal">
+              <label for="title">
+                <input
+                  class="create-input"
+                  type="text"
+                  value=""
+                  placeholder="title"
+                />
+              </label>
+              <label for="description">
+                <textarea
+                  name="description"
+                  class="create-description"
+                  cols="30"
+                  rows="10"
+                  placeholder="description"
+                ></textarea>
+              </label>
+              <select class="create-priority">
+                <option value="high">high</option>
+                <option value="normal" selected>normal</option>
+                <option value="low">low</option>
+              </select>
+              <div class="modal-actions">
+                <div>
+                  <button class="button cancel-todo" type="button">Cancel</button>
+                </div>
+                <div>
+                  <button class="button save-todo" type="button">Save</button>
+                  <button class="button update-todo" type="button">Update</button>
+                </div>
+              </div>
+            </div>
+      </div>
+      <footer>
+        <h2>Dmytro Nazarenko</h2>
+      </footer>
+    </div>
+  </body>
+</html>

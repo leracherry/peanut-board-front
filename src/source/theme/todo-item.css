@@ -1,0 +1,67 @@
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.825rem;
+  color: #000;
+  min-height: 12rem;
+
+  & .description {
+    padding: 0.345rem 0;
+  }
+
+  & .todo-item__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .priority-box {
+    border: 1px dashed #000;
+    border-radius: 15px;
+    display: inline-flex;
+    padding: 0.525rem;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  & .action-box {
+    position: relative;
+    padding-bottom: 1rem;
+    &:hover {
+      & .actions {
+        display: flex;
+      }
+    }
+  }
+
+  & .action-box__menu {
+    border: 1px solid #000;
+    border-radius: 15px;
+    display: inline-flex;
+    padding: 0.525rem;
+    cursor: pointer;
+  }
+
+  & .actions {
+    display: none;
+    position: absolute;
+    width: 10rem;
+    top: 100%;
+    left: -6.125rem;
+    background-color: #fafafa;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+
+    & button {
+      margin: 0.3rem 0;
+    }
+  }
+}
+
+.is-done {
+  background-color: rgba(168, 238, 144, 0.2);
+}
