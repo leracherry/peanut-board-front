@@ -13,7 +13,6 @@ import { Google } from "./Google";
 import GoogleButton from "react-google-button";
 import GoogleLogin from "react-google-login";
 
-
 const schema = yup.object().shape({
     email: yup
         .string()
@@ -36,7 +35,7 @@ export const Step2 = () => {
     });
 
     const onSubmit = (data) => {
-        history.push(".Step2");
+        history.push("/");
         setValues(data);
     };
 
@@ -64,17 +63,17 @@ export const Step2 = () => {
                     error={!!errors.password}
                     helperText={errors?.password?.message}
                 />
-                <PrimaryButton onClick={onSubmit}>OK</PrimaryButton>
+                <PrimaryButton onClick={()=>window.location.href="http://localhost:63342/Front/peanut-board-front/src/docs/index.html?_ijt=tfju84qcuak0oemnlrqfn7b4l1"}>OK</PrimaryButton>
 
                 <GoogleButton
-                style={{
-                    width: 395,
-                    textAlign: 'center',
-                }}
-                type="light"// can be light or dark
-                onClick={() => {
-                    window.location.assign('/Google');
-                }}
+                    style={{
+                        width: 395,
+                        textAlign: 'center',
+                    }}
+                    type="light"// can be light or dark
+                    onClick={() => {
+                        window.location.assign('/Google');
+                    }}
                 />
 
             </Form>
