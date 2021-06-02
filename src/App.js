@@ -4,7 +4,6 @@ import { Step1 } from "./Step1";
 import { Step2 } from "./Step2";
 import { Google } from "./Google";
 import { Main } from "./Main";
-import { About } from "./About";
 import { Pricing } from "./Pricing";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -46,9 +45,6 @@ function App() {
                           <Link to="/" className="nav-link">
                               Main
                           </Link>
-                          <Link to="/About" className="nav-link">
-                              About Us
-                          </Link>
                           <Link to="/Pricing" className="nav-link">
                               Pricing
                           </Link>
@@ -64,7 +60,6 @@ function App() {
           <Route path="/Step1" component={Step1} />
           <Route path="/Step2" component={Step2} initialParams={{setToken}}/>
           <Route path="/Google" component={Google} />
-          <Route path="/About" component={About} />
           <Route path="/Pricing" component={Pricing} />
         </Switch>
       </Router>

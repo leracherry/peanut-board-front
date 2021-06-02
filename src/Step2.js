@@ -63,7 +63,7 @@ export const Step2 = () => {
                     error={!!errors.password}
                     helperText={errors?.password?.message}
                 />
-                <PrimaryButton onClick={()=>window.location.href="http://localhost:63342/Front/peanut-board-front/src/docs/index.html?_ijt=tfju84qcuak0oemnlrqfn7b4l1"}>OK</PrimaryButton>
+                <PrimaryButton onClick={()=>window.location.href="http://localhost:63342/peanut-board-front/peanut-board-front/src/docs/index.html?_ijt=30b4bqtsq3530bo57k1o2i33n4"}>OK</PrimaryButton>
 
                 <GoogleButton
                     style={{
