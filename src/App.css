@@ -85,3 +85,7 @@
     font-weight: bold;
     font-family: 'Charlie Display',sans-serif;
 }
+.button-link{
+    display: flex;
+    text-decoration:none;
+}
