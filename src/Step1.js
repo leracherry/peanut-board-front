@@ -90,7 +90,9 @@ export const Step1 = () => {
                 error={!!errors.password}
                 helperText={errors?.password?.message}
             />
-            <PrimaryButton>Ok</PrimaryButton>
+            <PrimaryButton onClick={() => {
+              window.location.assign('/Step2');
+            }}>Ok</PrimaryButton>
           </Form>
           <Link to="/Step2">Sign in</Link>
         </MainContainer>

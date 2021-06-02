@@ -9,9 +9,9 @@ import { MainContainer } from "./components/MainContainer";
 import { Form } from "./components/Form";
 import { Input } from "./components/Input";
 import * as yup from "yup";
-import { Google } from "./Google";
-import GoogleButton from "react-google-button";
-import GoogleLogin from "react-google-login";
+import GoogleLoginButton from 'react-google-login-button'
+
+
 
 const schema = yup.object().shape({
     email: yup
@@ -64,20 +64,21 @@ export const Step2 = () => {
                     helperText={errors?.password?.message}
                 />
                 <PrimaryButton onClick={()=>window.location.href="http://localhost:63342/peanut-board-front/peanut-board-front/src/docs/index.html?_ijt=30b4bqtsq3530bo57k1o2i33n4"}>OK</PrimaryButton>
-
-                <GoogleButton
-                    style={{
-                        width: 395,
-                        textAlign: 'center',
-                    }}
-                    type="light"// can be light or dark
-                    onClick={() => {
-                        window.location.assign('/Google');
-                    }}
+                <GoogleLoginButton alignment='center' className="GoogleLogin"
+                                   buttonLocale="en"
+                googleClientId='242591386881-0mfgm6rd6nvdgib9m8gkgdpj1o4c7lh9.apps.googleusercontent.com'
+                onLoginSuccess={(googleUser) => {
+                    console.log('Replace this function to start using this information');
+                    console.log('Google User:', googleUser.getBasicProfile());
+                    console.log('ID token:', googleUser.getAuthResponse().id_token);
+                }}
+                onLoginFailure={() => console.log('Login failed')}
+                width={395}
+                height={40}
+                longTitle={false}
+                theme="light"
                 />
-
-            </Form>
-            <br></br>
+        </Form>
             <Link to="/">Sign up</Link>
 
         </MainContainer>
