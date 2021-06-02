@@ -24,7 +24,7 @@ export const Main = () => {
             <p className="content2" align="middle">Start with a Peanut board, lists, and cards. Customize and expand with more features as your teamwork grows.
                 Manage projects, organize tasks, and build team spirit—all in one place.
             </p>
-            <p className="mainContent3" align="left">Features to help your team succeed</p>
+            <p className="mainContent3" align="left"> Features to help your team succeed</p>
             <p className="content3" align="left">Powering a productive team means using a powerful tool (and plenty of snacks).
                 From meetings and projects to events and goal setting, Peanut’s intuitive features give any team the ability to quickly
                 set up and customize workflows for just about anything.

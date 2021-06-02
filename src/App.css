@@ -89,3 +89,14 @@
     display: flex;
     text-decoration:none;
 }
+.card-container{
+    width:300px;
+    overflow:hidden;
+    box-shadow:0 0 15px -5px;
+}
+
+.g-4{
+    width:100%;
+    height:auto;
+    padding: 50px 200px 0 200px;
+}
