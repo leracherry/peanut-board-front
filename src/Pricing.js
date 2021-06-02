@@ -1,6 +1,8 @@
 import React from 'react';
 import {MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBBtn} from 'mdb-react-ui-kit';
 import Button from "@material-ui/core/Button";
+import GooglePayButton from "@google-pay/button-react";
+import './App.css';
 
 export function CardDisplay() {
     return (
@@ -34,6 +36,44 @@ export function CardDisplay() {
                         <MDBCardText align="middle">For teams that need to create project plans with confidence.</MDBCardText>
                         <MDBCardTitle align="middle">$10,99</MDBCardTitle>
                         <Button href='#' alignment='center' variant="contained" size="small" color="primary">Get Started</Button>
+                        <GooglePayButton className="GooglePay"
+                                         buttonLocale="en"
+                                         buttonColor="white"
+                                         environment="TEST"
+                                         paymentRequest={{
+                                             apiVersion: 2,
+                                             apiVersionMinor: 0,
+                                             allowedPaymentMethods: [
+                                                 {
+                                                     type: 'CARD',
+                                                     parameters: {
+                                                         allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                                                         allowedCardNetworks: ['MASTERCARD', 'VISA'],
+                                                     },
+                                                     tokenizationSpecification: {
+                                                         type: 'PAYMENT_GATEWAY',
+                                                         parameters: {
+                                                             gateway: 'example',
+                                                         },
+                                                     },
+                                                 },
+                                             ],
+                                             merchantInfo: {
+                                                 merchantId: '12345678901234567890',
+                                                 merchantName: 'Demo Merchant',
+                                             },
+                                             transactionInfo: {
+                                                 totalPriceStatus: 'FINAL',
+                                                 totalPriceLabel: 'Total',
+                                                 totalPrice: '100.00',
+                                                 currencyCode: 'USD',
+                                                 countryCode: 'US',
+                                             },
+                                         }}
+                                         onLoadPaymentData={paymentRequest => {
+                                             console.log('load payment data', paymentRequest);
+                                         }}
+                        />
                     </MDBCardBody>
                 </MDBCard>
             </MDBCol>
@@ -51,6 +91,44 @@ export function CardDisplay() {
                         </MDBCardText>
                         <MDBCardTitle align="middle">$24,99</MDBCardTitle>
                         <Button href='#' alignment='center' variant="contained" size="small" color="primary">Get Started</Button>
+                        <GooglePayButton className="GooglePay"
+                            buttonLocale="en"
+                            buttonColor="white"
+                            environment="TEST"
+                            paymentRequest={{
+                                apiVersion: 2,
+                                apiVersionMinor: 0,
+                                allowedPaymentMethods: [
+                                    {
+                                        type: 'CARD',
+                                        parameters: {
+                                            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                                            allowedCardNetworks: ['MASTERCARD', 'VISA'],
+                                        },
+                                        tokenizationSpecification: {
+                                            type: 'PAYMENT_GATEWAY',
+                                            parameters: {
+                                                gateway: 'example',
+                                            },
+                                        },
+                                    },
+                                ],
+                                merchantInfo: {
+                                    merchantId: '12345678901234567890',
+                                    merchantName: 'Demo Merchant',
+                                },
+                                transactionInfo: {
+                                    totalPriceStatus: 'FINAL',
+                                    totalPriceLabel: 'Total',
+                                    totalPrice: '100.00',
+                                    currencyCode: 'USD',
+                                    countryCode: 'US',
+                                },
+                            }}
+                            onLoadPaymentData={paymentRequest => {
+                                console.log('load payment data', paymentRequest);
+                            }}
+                        />
                     </MDBCardBody>
                 </MDBCard>
             </MDBCol>
