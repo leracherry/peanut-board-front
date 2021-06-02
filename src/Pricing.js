@@ -35,7 +35,6 @@ export function CardDisplay() {
                         <MDBCardTitle align="middle">Premium</MDBCardTitle>
                         <MDBCardText align="middle">For teams that need to create project plans with confidence.</MDBCardText>
                         <MDBCardTitle align="middle">$10,99</MDBCardTitle>
-                        <Button href='#' alignment='center' variant="contained" size="small" color="primary">Get Started</Button>
                         <GooglePayButton className="GooglePay"
                                          buttonLocale="en"
                                          buttonColor="white"
@@ -90,7 +89,6 @@ export function CardDisplay() {
                             For teams and companies that need to manage work across initiatives.
                         </MDBCardText>
                         <MDBCardTitle align="middle">$24,99</MDBCardTitle>
-                        <Button href='#' alignment='center' variant="contained" size="small" color="primary">Get Started</Button>
                         <GooglePayButton className="GooglePay"
                             buttonLocale="en"
                             buttonColor="white"
